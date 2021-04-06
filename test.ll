@@ -7,7 +7,6 @@
 
 define i32 @main() {
 entry:
-  %d = shl i32 2, 3
   %new_ptr = getelementptr %MyStruct, %MyStruct* @struct, i32 0, i32 1
   %loaded_ptr = load [4 x i8]*, [4 x i8]** %new_ptr
   %goal = getelementptr [4 x i8], [4 x i8]* %loaded_ptr, i32 0, i32 1
